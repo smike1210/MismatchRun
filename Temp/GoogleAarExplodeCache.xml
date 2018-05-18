@@ -1,0 +1,178 @@
+<aars>
+  <explodeData>
+    <aar>gpgs-plugin-support-0.9.42</aar>
+    <modificationTime>0001-01-01T00:00:00.0000000-06:00</modificationTime>
+    <explode>true</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/gpgs-plugin-support-0.9.42</path>
+    <targetAbi>fat</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-auth-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-auth-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-auth-base-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-auth-base-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-base-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-base-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-basement-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-basement-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-drive-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-drive-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-games-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-games-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-nearby-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-nearby-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>play-services-tasks-10.2.6</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/play-services-tasks-10.2.6.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>support-annotations-25.2.0</aar>
+    <modificationTime>0001-01-01T00:00:00.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/support-annotations-25.2.0.jar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>support-compat-25.2.0</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/support-compat-25.2.0.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>support-core-ui-25.2.0</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/support-core-ui-25.2.0.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>support-core-utils-25.2.0</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/support-core-utils-25.2.0.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>support-fragment-25.2.0</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/support-fragment-25.2.0.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>support-media-compat-25.2.0</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/support-media-compat-25.2.0.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+  <explodeData>
+    <aar>support-v4-25.2.0</aar>
+    <modificationTime>2017-12-13T19:31:04.0000000-06:00</modificationTime>
+    <explode>false</explode>
+    <bundleId>com.SoumIO.Mismatch_Run</bundleId>
+    <path>Assets/Plugins/Android/support-v4-25.2.0.aar</path>
+    <targetAbi>universal</targetAbi>
+    <gradleBuildEnabled>false</gradleBuildEnabled>
+    <gradleExport>false</gradleExport>
+    <ignoredVersion />
+  </explodeData>
+</aars>

@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{99FA0EB2-6C50-C15B-7E8C-337685797879}|">
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/volumeControl.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AniCircle.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/AniOval.cs" Line="2" Column="2" />
+      <File FileName="Assets/Scripts/AniPent.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/AniSquare.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/AniStar.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/AniTri.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/DontStopMusic.cs" Line="6" Column="2" />
+      <File FileName="Assets/Scripts/Countdown.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/volumeControl.cs" Line="13" Column="1" />
+      <File FileName="Assets/Scripts/hide.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/StopperScript.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/Falling.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/menuCTRL.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/pauseScript.cs" Line="5" Column="15" />
+      <File FileName="Assets/Scripts/finalscore.cs" Line="5" Column="15" />
+      <File FileName="../Documents/:Users:mshea:Mismatch Run:Assets:sliderScript.cs" Line="19" Column="1" />
+      <File FileName="Assets/Scripts/PlayGamesScript.cs" Line="7" Column="1" />
+      <File FileName="Assets/Scripts/iapManager.cs" Line="2" Column="21" />
+      <File FileName="Assets/Scripts/GPGSIds.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Mismatch_220Run PreferredExecutionTarget="Unity.Editor" />
+  <MultiItemStartupConfigurations />
+</Properties>
