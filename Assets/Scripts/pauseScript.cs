@@ -48,15 +48,19 @@ public class pauseScript : MonoBehaviour {
     public GameObject chain6;
     public GameObject[] chains;
 
+    public GameObject FallingCat;
+
     public Button mainMenu;
     public Camera mainCamera;
 
     public void Start()
     {
+        // find falling category object by tag;
+        FallingCat = GameObject.FindWithTag("FallingCat");
+
         // initialize buttons array and gameobjects arrays when game starts
         buttons = new Button[] { btn11, btn12, btn13, btn21, btn22, btn23, btn31, btn32, btn33,btn41, btn42, btn43,btn51, btn52, btn53,btn61, btn62, btn63};
-        chains = new GameObject[] { chain1, chain2, chain3, chain4, chain5, chain6 };
-
+        chains = new GameObject[] { chain1, chain2, chain3, chain4, chain5, chain6, FallingCat };
     }
 
     public void pause()

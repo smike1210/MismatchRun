@@ -12,6 +12,8 @@ TagManager:
   - Chain4
   - Chain5
   - Chain6
+  - FallingCat
+  - FallingCatStart
   layers:
   - Default
   - TransparentFX

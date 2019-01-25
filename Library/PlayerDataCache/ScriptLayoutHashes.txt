@@ -14,9 +14,8 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-be42fd1dbd0c44b5f24d2d7d17fb591b Assembly-CSharp.dll:.pauseScript
+6d4709acd5c790c76c8d9565903e6f34 Assembly-CSharp.dll:.pauseScript
 f25fd3873e43d46640b1fd4aa42dc1ab Assembly-CSharp-firstpass.dll:.IAPDemoProductUI
-a2205716825ec469d1261a4e1cadddf2 Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.IAPButton
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
 49cd62a578efc0a599b810a2b66cd49c UnityEngine.UI.dll:UnityEngine.UI.Button
@@ -96,7 +95,6 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.GroupTrack
 6af7378a45ad6da4992a71ef50ddc2eb UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 af723155c251fcfa0e66530a75f3ea4c UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
-43e0bb756dbd788930987fd144a47b68 Assembly-CSharp-firstpass.dll:UnityEngine.Purchasing.IAPListener
 fc1e0f4d8439d9928083474691511a13 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkAnimator
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Networking.dll:UnityEngine.Networking.NetworkBehaviour
 60b2bb652410a5867a5ab9a01cd38461 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkDiscovery
@@ -161,10 +159,8 @@ cb6f7b44bf6ec4268dfebeab4cbce360 Assembly-CSharp.dll:.AniCircle
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:GooglePlayGames.OurUtils.PlayGamesHelperObject
 6e9001e4a9953932d9fbd6c25d6b982f Assembly-CSharp.dll:.Countdown
 460ccdf5ff5875dc4e55069b3f5aa08e Assembly-CSharp.dll:.AniSquare
-06adc3f3de013b02e886c2ff00cf2147 Assembly-CSharp.dll:.Ani1
-614cb4f4d0c5b7d9965414dc5a2d0477 Assembly-CSharp.dll:.StopperScript
+13f63f1a6859eed704c0875252e3cdc9 Assembly-CSharp.dll:.StopperScript
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.iapManager
-05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.saveScore
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.hide
 1fa8f9e6f1f0539be730c19968fdf23b Assembly-CSharp.dll:.Falling
 8159363767c8f67409b50fbc4e1f1264 Assembly-CSharp-firstpass.dll:.IAPDemo

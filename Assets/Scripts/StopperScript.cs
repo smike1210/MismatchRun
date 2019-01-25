@@ -68,6 +68,9 @@ public class StopperScript : MonoBehaviour {
     public Button btn62;
     public Button btn63;
 
+    // gameobject that holds the falling category change announcement
+    public GameObject FallingCat;
+
     // images used to display the categories
     public Sprite colorImage;
     public Sprite sizeImage;
@@ -88,6 +91,7 @@ public class StopperScript : MonoBehaviour {
     public GameObject chainStarter5;
     public GameObject chainStarter6;
     public GameObject catStarter;
+    public GameObject fallingCatStarter;
 
     // arrays to hold sprites and sounds
     public Sprite[] catImages;
@@ -102,6 +106,13 @@ public class StopperScript : MonoBehaviour {
     public int count = 0;
     public int catType = 0;
 
+    //vars to allow for gap to appear in chains when category changes
+    public int number_paused;
+    public int how_many_to_pause = 6;
+    public int cur_pausing;
+    public volatile bool pausing;
+    public bool bar_at_bottom;
+
     //vectors that hold the initial chain positions during countdown
     public Vector3 chain1Start;
     public Vector3 chain2Start;
@@ -109,6 +120,7 @@ public class StopperScript : MonoBehaviour {
     public Vector3 chain4Start;
     public Vector3 chain5Start;
     public Vector3 chain6Start;
+    public Vector3 fallingCatStart;
 
     //all the sprite variables for each shape and color
     public Sprite CLEnd;
@@ -189,7 +201,8 @@ public class StopperScript : MonoBehaviour {
     public Button[] chain6buts;
     public int[,] butShapes;
 
-
+    // array of chain game objects
+    public GameObject[] chains;
 
 
     // int used for control flow at start to make sure chains do not come down
@@ -198,6 +211,16 @@ public class StopperScript : MonoBehaviour {
 
     void Start()
     {
+        // set pausing to true so the falling category will fall initially.
+        pausing = true;
+        cur_pausing = -1;
+        bar_at_bottom = false;
+
+        // find falling category object by tag;
+        FallingCat = GameObject.FindWithTag("FallingCat");
+        // find falling category start object by tag;
+        fallingCatStarter = GameObject.FindWithTag("FallingCatStart");
+
         // create new buttons for each chain
         chain1buts = new Button[] { btn11, btn12, btn13 };
         chain2buts = new Button[] { btn21, btn22, btn23 };
@@ -205,6 +228,11 @@ public class StopperScript : MonoBehaviour {
         chain4buts = new Button[] { btn41, btn42, btn43 };
         chain5buts = new Button[] { btn51, btn52, btn53 };
         chain6buts = new Button[] { btn61, btn62, btn63 };
+
+        // init chains array
+        chains = new GameObject[] { chain1, chain2, chain3, chain4, chain5, chain6};
+
+
         // shapes of all buttons for now null (0)
         butShapes = new int[,] { { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 }, { 0, 0, 0 } };
 
@@ -230,7 +258,7 @@ public class StopperScript : MonoBehaviour {
         //initial category
         catType = Random.Range(0, 3);
         //determines amount of chains until the first switch
-        tilSwitch = Random.Range(4, 9);
+        tilSwitch = Random.Range(1, 5);
 
         //set initial chain positions
         chain1Start = chainStarter1.transform.position;
@@ -239,14 +267,15 @@ public class StopperScript : MonoBehaviour {
         chain4Start = chainStarter4.transform.position;
         chain5Start = chainStarter5.transform.position;
         chain6Start = chainStarter6.transform.position;
+        fallingCatStart = fallingCatStarter.transform.position;
 
         // this is the position chains will reset to to when they get to the bottom
         // and the user had selected the item correctly
-        chainHomePos = chainStarter1.transform.position;
+        chainHomePos = fallingCatStarter.transform.position;
     }
     void Update()
     {
-        // if the countdown is over and repaly is 0, meaning we are in initial starting
+        // if the countdown is over and rep;ay is 0, meaning we are in initial starting
         // phase, start the game
         if(countDown.sprite == go && replay==0 )
         {
@@ -256,6 +285,9 @@ public class StopperScript : MonoBehaviour {
             mainCatImage.sprite = catImages[catType];
             mainCatSound.clip = catSounds[catType];
             mainCatSound.Play();
+            // set the falling category sprite correctly
+            FallingCat.GetComponent<SpriteRenderer>().sprite = catImages[catType];
+            // intit all chains and respective buttons
             resetChain(btn11, btn12, btn13, 1);
             resetChain(btn21, btn22, btn23, 2);
             resetChain(btn31, btn32, btn33, 3);
@@ -264,6 +296,8 @@ public class StopperScript : MonoBehaviour {
             resetChain(btn61, btn62, btn63, 6);
             //first chain of each cateogry is red
             chain1.GetComponent<SpriteRenderer>().sprite = redChain;
+            //reset falling category
+            FallingCat.transform.position = chainHomePos;
             //set started bool to true
             started = true;
         }
@@ -277,9 +311,20 @@ public class StopperScript : MonoBehaviour {
             chain4.transform.position = chain4Start;
             chain5.transform.position = chain5Start;
             chain6.transform.position = chain6Start;
+            FallingCat.transform.position = fallingCatStart;
         }
 
+        if (!pausing)
+        {
+            //reset falling category
+            FallingCat.transform.position = chainHomePos;
+        }
 
+        // if we are pausing chain to make room for for category change notification, pause the current chain the just hit bottom
+        if (pausing && cur_pausing != -1 && !bar_at_bottom)
+        {
+            chains[cur_pausing - 1].transform.position = chainHomePos;
+        }
     }
 
     // fade function when the game is over, and then load game over scene
@@ -803,7 +848,7 @@ public class StopperScript : MonoBehaviour {
             if (++count == tilSwitch)
             {
                 count = 0;
-                tilSwitch = Random.Range(4, 9);
+                tilSwitch = Random.Range(6, 10);
                 int temp = catType;
                 // make sure new category is not the current one
                 while (catType == temp)
@@ -815,6 +860,11 @@ public class StopperScript : MonoBehaviour {
                 mainCatImage.sprite = catImages[catType];
                 mainCatSound.clip = catSounds[catType];
                 mainCatSound.Play();
+                // pause the next chains to allow for gap between chains
+                pausing = true;
+                cur_pausing = -1;
+                // set the falling category sprite correctly
+                FallingCat.GetComponent<SpriteRenderer>().sprite = catImages[catType];
             }
         }
         // check what chain was selected. If the chain has been corectly answered
@@ -834,6 +884,7 @@ public class StopperScript : MonoBehaviour {
             }
             if (answered == false)
             {
+                bar_at_bottom = true;
                 stop.sprite = redCircle;
                 disBut();
                 StartCoroutine(waitsec());
@@ -850,6 +901,10 @@ public class StopperScript : MonoBehaviour {
                 {
                     chain1.GetComponent<SpriteRenderer>().sprite = blackChain;
                 }
+                if (pausing)
+                {
+                    cur_pausing = 1;
+                }
             }
         }
         else if (col.gameObject.CompareTag("Chain2"))
@@ -864,6 +919,7 @@ public class StopperScript : MonoBehaviour {
             }
             if (answered == false)
             {
+                bar_at_bottom = true;
                 stop.sprite = redCircle;
                 disBut();
                 StartCoroutine(waitsec());
@@ -881,6 +937,16 @@ public class StopperScript : MonoBehaviour {
                     chain2.GetComponent<SpriteRenderer>().sprite = blackChain;
                 } 
             }
+            if (pausing)
+            {
+                if (number_paused == how_many_to_pause)
+                {
+                    pausing = false;
+                    return;
+                }
+                number_paused++;
+                cur_pausing = 2;
+            }
         }
         else if (col.gameObject.CompareTag("Chain3"))
         {
@@ -894,6 +960,7 @@ public class StopperScript : MonoBehaviour {
             }
             if (answered == false)
             {
+                bar_at_bottom = true;
                 stop.sprite = redCircle;
                 disBut();
                 StartCoroutine(waitsec());
@@ -911,6 +978,10 @@ public class StopperScript : MonoBehaviour {
                     chain3.GetComponent<SpriteRenderer>().sprite = blackChain;
                 }
             }
+            if (pausing)
+            {
+                cur_pausing = 3;
+            }
         }
         else if (col.gameObject.CompareTag("Chain4"))
         {
@@ -924,6 +995,7 @@ public class StopperScript : MonoBehaviour {
             }
             if (answered == false)
             {
+                bar_at_bottom = true;
                 stop.sprite = redCircle;
                 disBut();
                 StartCoroutine(waitsec());
@@ -941,6 +1013,10 @@ public class StopperScript : MonoBehaviour {
                     chain4.GetComponent<SpriteRenderer>().sprite = blackChain;
                 }
             }
+            if (pausing)
+            {
+                cur_pausing = 4;
+            }
         }
         else if (col.gameObject.CompareTag("Chain5"))
         {
@@ -954,6 +1030,7 @@ public class StopperScript : MonoBehaviour {
             }
             if (answered == false)
             {
+                bar_at_bottom = true;
                 stop.sprite = redCircle;
                 disBut();
                 StartCoroutine(waitsec());
@@ -971,6 +1048,10 @@ public class StopperScript : MonoBehaviour {
                     chain5.GetComponent<SpriteRenderer>().sprite = blackChain;
                 }
             }
+            if (pausing)
+            {
+                cur_pausing = 5;
+            }
         }
         else if (col.gameObject.CompareTag("Chain6"))
         {
@@ -984,6 +1065,7 @@ public class StopperScript : MonoBehaviour {
             }
             if (answered == false)
             {
+                bar_at_bottom = true;
                 stop.sprite = redCircle;
                 disBut();
                 StartCoroutine(waitsec());
@@ -1001,8 +1083,15 @@ public class StopperScript : MonoBehaviour {
                     chain6.GetComponent<SpriteRenderer>().sprite = blackChain;
                 }
             }
+            if (pausing)
+            {
+                cur_pausing = 6;
+            }
         }
-
+        else if (col.gameObject.CompareTag("FallingCat"))
+        {
+            pausing = false;
+        }
     }
 
     // wait 1.5 seconds then load the gameover scene
